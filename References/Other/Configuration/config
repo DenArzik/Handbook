@@ -1,0 +1,24 @@
+Host ninja_30
+    HostName 10.64.2.30
+    User argo_opr
+    ProxyJump jump-server-ninja
+    IdentityFile /home/den/Desktop/jb/ssh/argo_opr_id_rsa
+
+Host ninja_26
+    HostName 10.64.2.26
+    User argo_opr
+    ProxyJump jump-server-ninja
+    IdentityFile /home/den/Desktop/jb/ssh/argo_opr_id_rsa
+
+Host jump-server-ninja
+    HostName 35.75.184.13
+    Port 10022
+    User argo_opr
+    IdentityFile /home/den/Desktop/jb/ssh/argo_opr_id_rsa
+    ProxyJump argo-server
+
+Host argo-server
+    HostName 70.91.103.41
+    Port 44513
+    User darzhevichev
+    IdentityFile /home/den/.ssh/id_rsa
